@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__AppPage">
+            <event name="accountselected" label="Account Selected" description="This event fires
+when an account is selected.">
+                <schema>
+                {
+                    "type": "object",
+                    "properties": {
+                        "recordId": {
+                            "type": "string",
+                            "title": "Account ID",
+                            "description": "The ID of the selected account."
+                        },
+                        "recordName": {
+                            "type": "string",
+                            "title": "Account Name",
+                            "description": "The name of the selected account."
+                        }
+                    }
+                }
+                </schema>
+            </event>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

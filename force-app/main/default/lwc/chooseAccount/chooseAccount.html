@@ -1,0 +1,10 @@
+<template>
+    <div class="slds-card slds-var-p-around_small">
+        <div class="slds-text-heading_small">Choose Account</div>
+        <div class="slds-var-p-around_small">
+            <lightning-combobox label="Select Account" options={accountOptions} onchange={accountSelected}
+            value={selectedAccountId}>
+        </lightning-combobox>
+        </div>
+    </div>
+</template>

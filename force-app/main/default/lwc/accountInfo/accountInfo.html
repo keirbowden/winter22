@@ -1,0 +1,32 @@
+<template>
+    <div class="slds-card slds-var-p-around_small">
+        <div class="slds-text-heading_small">Opportunities</div>
+        <div class="slds-var-p-around_small">
+        <template if:true={hasAccount}>
+            <template if:false={noOpportunitiesFound}>
+                <div>Here are the opportunities for account {_recordName} :
+                    <div class="slds-var-p-around_x-large">
+                        <ul>
+                            <template for:each={opportunities} for:item="opp">
+                                <li key={opp.Id}>
+                                    {opp.Name} -
+                                    <lightning-formatted-number value={opp.Amount}></lightning-formatted-number> -
+                                    <lightning-formatted-date-time value={opp.CloseDate}>
+                                    </lightning-formatted-date-time> -
+                                    {opp.StageName}
+                                </li>
+                            </template>
+                        </ul>
+                    </div>
+                </div>
+            </template>
+            <template if:true={noOpportunitiesFound}>
+                No opportunities found for account {_recordName}.
+            </template>
+        </template>
+        <template if:false={hasAccount}>
+            Please select an account.
+        </template>
+    </div>
+    </div>
+</template>
