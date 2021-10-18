@@ -1,7 +1,6 @@
 {
   "orgName": "kbowden company",
   "edition": "Developer",
-  "release": "Preview",
   "features": ["EnableSetPasswordInApi"],
   "settings": {
     "lightningExperienceSettings": {
